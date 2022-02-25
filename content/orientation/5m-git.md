@@ -64,7 +64,7 @@ Here is a table of most essential git commands:
 
 Subcommand | Description | Usage
 :--------|:-------------|:-------
-clone | This command clones repositories from github | `git clone https://github.com/gaow/lab-wiki` |
+clone | This command clones repositories from github | `git clone https://github.com/cumc/lab-wiki` |
 status | This command displays the state of your working directory and the staging area| `git status`|
 diff | Let you see differences between the working tree and the index or a tree| `git diff <filename>`|
 add | This serves to add the file to the repo. Every time you change a file add it to the repo using this command and commiting it | `git add <filename>` |

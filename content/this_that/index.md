@@ -22,4 +22,4 @@
 
 ## For international scholars
 
-- [J1 and H1B visa, a personal experience](https://github.com/gaow/lab-wiki/blob/master/private/admin/visa.md).
+- [J1 and H1B visa, a personal experience](https://github.com/cumc/lab-wiki/blob/master/private/admin/visa.md).

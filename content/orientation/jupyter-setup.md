@@ -41,7 +41,7 @@ a [JupyterLab + SoS Suite environment](https://doi.org/10.1371/journal.pcbi.1006
 
 **Note:** maybe you already have a version of `anaconda` or `miniconda` on your computer. If you are very familiar with `conda` then please try to work with your existing version by either upgrading or create separate `env` under it to install additional packages. You might also want to start afresh and retire your older version (but keep the installation around for a while just in case). A simple approach is to rename your `miniconda3` folder to, say `miniconda3_bak`, and install the new `miniconda3`.
 
-**Note** It is of crucial importance that after the installation of conda, `conda init` command shall not be ran for reason outlined in issue [#3](https://github.com/gaow/lab-wiki/issues/3).
+**Note** It is of crucial importance that after the installation of conda, `conda init` command shall not be ran for reason outlined in issue [#3](https://github.com/cumc/lab-wiki/issues/3).
 
 
 ## `conda` vs `pip` for package installation

@@ -42,7 +42,7 @@ xed /path/to/file.txt
 
 ## Connect to this computer from another one
 
-[This page](http://statgen.us/lab-wiki/productivity_tips/remote-computer) documents three ways to connect from another computer to this computer:
+[This page](https://cumc.github.io/gaow-wiki/productivity_tips/remote-computer) documents three ways to connect from another computer to this computer:
 
 1. bash terminal
 2. Juypter Lab
