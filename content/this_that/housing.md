@@ -41,13 +41,15 @@ Many of us live in Fort Lee, NJ.
 There is a free Columbia University shuttle that goes back and forth every day.
 The shuttle stops at the Constitutional Park, Fort Lee, NJ.
 There is also a shuttle to the main Columbia University (Morningside) campus.
-Biking from Fort Lee is also a great option. A bike under $100 from [Walmart](https://www.walmart.com) will do for commute purpose.
-However, **electric bikes/scooters are not allowed in NYC** so you'll have to figure out something else for the NYC part of the commute if you do get one of those.
+Biking from Fort Lee is also a great option. A bicycle under $100 from [Walmart](https://www.walmart.com) will do for commute purpose if your budget is tight. 
+Otherwise, Craigslist is a great resource for used fancier bicycles (that people bought but decided to sell due to a lack of usage). 
+You can also Google search "Bike exchange" or "Bike exchange facebook group" and find local people to trade used bikes.
+**Electric bikes/scooters are now allowed in NYC (since 2020)** --- another good option but less safe in my view compared to bicycles.
 Housing is more affordable there for the same condition of apartments compared to Manhattan.
 Fort Lee also has [great public schools](https://en.wikipedia.org/wiki/Fort_Lee_School_District),
 an important consideration for those who has kids.
 
-In Fort Lee NJ, anything $1,200-1,500 monthly will go fast and will be hard to find (usually studios).
+In Fort Lee NJ (in 2020), anything $1,200-1,500 monthly will go fast and will be hard to find (usually studios).
 If you go further South (such as Union City), you might find something easier in this price range.
 
 ### Fort Lee utilities information
