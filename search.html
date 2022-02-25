@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+
+  <title>Search the site</title>
+  <meta name="description" content="">
+
+  <link rel="canonical" href="http://statgen.us/lab-wiki/search">
+  <link rel="alternate" type="application/rss+xml" title="Lab Docs" href="http://statgen.us/lab-wiki/feed.xml">
+
+  <meta property="og:url"         content="http://statgen.us/lab-wiki/search" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Search the site" />
+<meta property="og:description" content="" />
+<meta property="og:image"       content="" />
+
+
+  <script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage":
+    "http://statgen.us/lab-wiki/search",
+  "headline":
+    "Search the site",
+  "datePublished":
+    "2022-02-24T20:02:00-06:00",
+  "dateModified":
+    "2022-02-24T20:02:00-06:00",
+  "description":
+    "",
+  "author": {
+    "@type": "Person",
+    "name": "Gao Wang"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Data 100 at UC Berkeley",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://statgen.us/lab-wiki",
+      "width": 60,
+      "height": 60
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "http://statgen.us/lab-wiki",
+    "height": 60,
+    "width": 60
+  }
+}
+
+  </script>
+  <link rel="stylesheet" href="/lab-wiki/assets/css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ">
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+
+  <!-- <link rel="manifest" href="/manifest.json"> -->
+  <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#efae0a"> -->
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#233947">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="/lab-wiki/images/favicon.ico">
+
+  <!-- MathJax Config -->
+  <!-- Allow inline math using $ and automatically break long math lines -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true,
+        processEnvironments: true
+    },
+    CommonHTML: {
+        linebreaks: {
+            automatic: true,
+        },
+    },
+});
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML' async></script>
+
+  <!-- DOM updating function -->
+  <script>
+const runWhenDOMLoaded = cb => {
+  if (document.readyState != 'loading') {
+    cb()
+  } else if (document.addEventListener) {
+    document.addEventListener('DOMContentLoaded', cb)
+  } else {
+    document.attachEvent('onreadystatechange', function() {
+      if (document.readyState == 'complete') cb()
+    })
+  }
+}
+
+// Helper function to init things quickly
+initFunction = function(myfunc) {
+  runWhenDOMLoaded(myfunc);
+  document.addEventListener('turbolinks:load', myfunc);
+};
+</script>
+
+  <!-- Define some javascript variables that will be useful in other javascript -->
+  <script>
+    const site_basename = '/lab-wiki';
+  </script>
+
+  <!-- Add AnchorJS to let headers be linked -->
+  <script src="/lab-wiki/assets/js/anchor.min.js"  type="text/javascript"></script>
+  <script>
+
+initFunction(function () {
+    anchors.add("main h1, main h2, main h3, main h4")
+});
+
+</script>
+
+  <!-- Include Turbolinks to make page loads fast -->
+  <!-- https://github.com/turbolinks/turbolinks -->
+  <script src="/lab-wiki/assets/js/turbolinks.js" async></script>
+  <meta name="turbolinks-cache-control" content="no-cache">
+
+  <!-- Load nbinteract for widgets -->
+  
+
+  <!-- Load Thebelab for interactive widgets -->
+  <!-- Include Thebelab for interactive code if it's enabled -->
+
+
+
+  <!-- Load the auto-generating TOC -->
+  <script src="/lab-wiki/assets/js/tocbot.min.js"  type="text/javascript"></script>
+  <script>
+var initToc = function () {
+  tocbot.init({
+    tocSelector: 'nav.onthispage',
+    contentSelector: '.c-textbook__content',
+    headingSelector: 'h2, h3',
+    orderedList: false,
+    collapseDepth: 6,
+    listClass: 'toc__menu',
+    activeListItemClass: "",  // Not using
+    activeLinkClass: "", // Not using
+  });
+  tocbot.refresh();
+}
+initFunction(initToc);
+</script>
+
+  <!-- Google analytics -->
+  <script src="/lab-wiki/assets/js/ga.js" async></script>
+
+  <!-- Clipboard copy button -->
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" async></script>
+
+  <!-- Load JS that depends on site variables -->
+  <script>
+/**
+ * Set up copy/paste for code blocks
+ */
+const codeCellId = index => `codecell${index}`
+
+const clipboardButton = id =>
+  `<a id="copy-button-${id}" class="btn copybtn o-tooltip--left" data-tooltip="Copy" data-clipboard-target="#${id}">
+    <img src="/lab-wiki/assets/images/copy-button.svg" alt="Copy to clipboard">
+  </a>`
+
+// Clears selected text since ClipboardJS will select the text when copying
+const clearSelection = () => {
+  if (window.getSelection) {
+    window.getSelection().removeAllRanges()
+  } else if (document.selection) {
+    document.selection.empty()
+  }
+}
+
+// Changes tooltip text for two seconds, then changes it back
+const temporarilyChangeTooltip = (el, newText) => {
+  const oldText = el.getAttribute('data-tooltip')
+  el.setAttribute('data-tooltip', newText)
+  setTimeout(() => el.setAttribute('data-tooltip', oldText), 2000)
+}
+
+const addCopyButtonToCodeCells = () => {
+  // If ClipboardJS hasn't loaded, wait a bit and try again. This
+  // happens because we load ClipboardJS asynchronously.
+  if (window.ClipboardJS === undefined) {
+    setTimeout(addCopyButtonToCodeCells, 250)
+    return
+  }
+
+  const codeCells = document.querySelectorAll('div.c-textbook__content > div.highlighter-rouge > div.highlight > pre, div.input_area pre')
+  codeCells.forEach((codeCell, index) => {
+    const id = codeCellId(index)
+    codeCell.setAttribute('id', id)
+    if (document.getElementById("copy-button" + id) == null) {
+      codeCell.insertAdjacentHTML('afterend', clipboardButton(id));
+    }
+  })
+
+  const clipboard = new ClipboardJS('.copybtn')
+  clipboard.on('success', event => {
+    clearSelection()
+    temporarilyChangeTooltip(event.trigger, 'Copied!')
+  })
+
+  clipboard.on('error', event => {
+    temporarilyChangeTooltip(event.trigger, 'Failed to copy')
+  })
+
+  // Get rid of clipboard before the next page visit to avoid memory leak
+  document.addEventListener('turbolinks:before-visit', () =>
+    clipboard.destroy()
+  )
+}
+
+initFunction(addCopyButtonToCodeCells);
+</script>
+
+
+  <!-- Hide cell code -->
+  <script>
+    /**
+    Add buttons to hide code cells
+    */
+
+
+    var setCodeCellVisibility = function (inputField, kind) {
+        // Update the image and class for hidden
+        var id = inputField.getAttribute('data-id');
+        var codeCell = document.querySelector(`#${id} div.highlight`);
+
+        if (kind === "visible") {
+            codeCell.classList.remove('hidden');
+            inputField.checked = true;
+        } else {
+            codeCell.classList.add('hidden');
+            inputField.checked = false;
+        }
+    }
+
+    var toggleCodeCellVisibility = function (event) {
+        // The label is clicked, and now we decide what to do based on the input field's clicked status
+        if (event.target.tagName === "LABEL") {
+            var inputField = event.target.previousElementSibling;
+        } else {
+            // It is the span inside the target
+            var inputField = event.target.parentElement.previousElementSibling;
+        }
+
+        if (inputField.checked === true) {
+            setCodeCellVisibility(inputField, "visible");
+        } else {
+            setCodeCellVisibility(inputField, "hidden");
+        }
+    }
+
+
+    // Button constructor
+    const hideCodeButton = id => `<input class="hidebtn" type="checkbox" id="hidebtn${id}" data-id="${id}"><label title="Toggle cell" for="hidebtn${id}" class="plusminus"><span class="pm_h"></span><span class="pm_v"></span></label>`
+
+    var addHideButton = function () {
+        // If a hide button is already added, don't add another
+        if (document.querySelector('div.hidecode input') !== null) {
+            return;
+        }
+
+        // Find the input cells and add a hide button
+        document.querySelectorAll('div.input_area').forEach(function (item, index) {
+            if (!item.classList.contains("hidecode")) {
+                // Skip the cell if it doesn't have a hidecode class
+                return;
+            }
+
+            const id = codeCellId(index)
+            item.setAttribute('id', id);
+            // Insert the button just inside the end of the next div
+            item.querySelector('div').insertAdjacentHTML('beforeend', hideCodeButton(id))
+
+            // Set up the visibility toggle
+            hideLink = document.querySelector(`#${id} div.highlight + input + label`);
+            hideLink.addEventListener('click', toggleCodeCellVisibility)
+        });
+    }
+
+
+    // Initialize the hide buttos
+    var initHiddenCells = function () {
+        // Add hide buttons to the cells
+        addHideButton();
+
+        // Toggle the code cells that should be hidden
+        document.querySelectorAll('div.hidecode input').forEach(function (item) {
+            setCodeCellVisibility(item, 'hidden');
+            item.checked = true;
+        })
+    }
+
+    initFunction(initHiddenCells);
+
+</script>
+
+  <!-- Load custom website scripts -->
+  <script src="/lab-wiki/assets/js/scripts.js" async></script>
+
+  <!-- Load custom user CSS and JS  -->
+  <script src="/lab-wiki/assets/custom/custom.js" async></script>
+  <link rel="stylesheet" href="/lab-wiki/assets/custom/custom.css">
+
+  <!-- Update interact links w/ REST param, is defined in includes so we can use templates -->
+  
+
+  <!-- Lunr search code - will only be executed on the /search page -->
+  <script src="/lab-wiki/assets/js/lunr/lunr.min.js" type="text/javascript"></script>
+  <script>var initQuery = function() {
+  // See if we have a search box
+  var searchInput = document.querySelector('input#lunr_search');
+  if (searchInput === null) {
+    return;
+  }
+
+  // Function to parse our lunr cache
+  var idx = lunr(function () {
+    this.field('title')
+    this.field('excerpt')
+    this.field('categories')
+    this.field('tags')
+    this.ref('id')
+
+    this.pipeline.remove(lunr.trimmer)
+
+    for (var item in store) {
+      this.add({
+        title: store[item].title,
+        excerpt: store[item].excerpt,
+        categories: store[item].categories,
+        tags: store[item].tags,
+        id: item
+      })
+    }
+  });
+
+  // Run search upon keyup
+  searchInput.addEventListener('keyup', function () {
+    var resultdiv = document.querySelector('#results');
+    var query = document.querySelector("input#lunr_search").value.toLowerCase();
+    var result =
+      idx.query(function (q) {
+        query.split(lunr.tokenizer.separator).forEach(function (term) {
+          q.term(term, { boost: 100 })
+          if(query.lastIndexOf(" ") != query.length-1){
+            q.term(term, {  usePipeline: false, wildcard: lunr.Query.wildcard.TRAILING, boost: 10 })
+          }
+          if (term != ""){
+            q.term(term, {  usePipeline: false, editDistance: 1, boost: 1 })
+          }
+        })
+      });
+
+      // Empty the results div
+      while (resultdiv.firstChild) {
+        resultdiv.removeChild(resultdiv.firstChild);
+      }
+
+    resultdiv.insertAdjacentHTML('afterbegin', '<p class="results__found">'+result.length+' Result(s) found</p>');
+    for (var item in result) {
+      var ref = result[item].ref;
+      if(store[ref].teaser){
+        var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<div class="archive__item-teaser">'+
+                '<img src="'+store[ref].teaser+'" alt="">'+
+              '</div>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      else{
+    	  var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      resultdiv.insertAdjacentHTML('beforeend', searchitem);
+    }
+  });
+};
+
+initFunction(initQuery);
+</script>
+</head>
+
+  <body>
+    <!-- .js-show-sidebar shows sidebar by default -->
+    <div id="js-textbook" class="c-textbook js-show-sidebar">
+      
+
+
+
+<nav id="js-sidebar" class="c-textbook__sidebar">
+  <a href="http://statgen.us/lab-wiki"><img src="/lab-wiki/images/logo.png" class="textbook_logo" id="sidebar-logo" data-turbolinks-permanent/></a>
+  <h2 class="c-sidebar__title">Lab Docs</h2>
+  <ul class="c-sidebar__chapters">
+    
+      
+      
+        <li class="c-sidebar__chapter"><a class="c-sidebar__entry" href="/lab-wiki/search.html"><img src="/lab-wiki/images/search.svg" alt="Search The Site"></a></li>
+        
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/lab-wiki/index.html"
+        >
+          
+          Home
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/lab-wiki/orientation/index.html"
+        >
+          
+          Orientation
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/lab-wiki/orientation/5m-git.html"
+                >
+                  
+                  5 minutes git
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/lab-wiki/orientation/github-issues.html"
+                >
+                  
+                  Use github issues
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/lab-wiki/orientation/jupyter-setup.html"
+                >
+                  
+                  Jupyter and SoS suite setup
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/lab-wiki/project_resource/index.html"
+        >
+          
+          Projects
+        </a>
+
+        
+
+          
+          
+          
+          
+
+          
+
+          <ul class="c-sidebar__sections ">
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/lab-wiki/project_resource/project.html"
+                >
+                  
+                  Project repositories
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/lab-wiki/project_resource/pipeline.html"
+                >
+                  
+                  Pipelines & benchmarks
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/lab-wiki/project_resource/data.html"
+                >
+                  
+                  Data resources
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+              
+              
+
+              <li class="c-sidebar__section">
+                <a class="c-sidebar__entry "
+                  href="/lab-wiki/project_resource/sharing-guideline.html"
+                >
+                  
+                  Sharing guidelines
+                </a>
+
+                
+                
+
+              </li>
+              
+            
+          </ul>
+        
+      </li>
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+        <li><h2 class="c-sidebar__title">Resources</li>
+        
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/lab-wiki/learning_center/index.html"
+        >
+          
+          Learning resource
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/lab-wiki/research_resource/index.html"
+        >
+          
+          Research resource
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/lab-wiki/productivity_tips/index.html"
+        >
+          
+          Productivity tips
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/lab-wiki/this_that/index.html"
+        >
+          
+          This and that
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+        <li><h2 class="c-sidebar__title">Lab tutorials</li>
+        
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/lab-wiki/compbio_tutorial/index.html"
+        >
+          
+          Computational biology
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/lab-wiki/computing_tutorial/index.html"
+        >
+          
+          Computing
+        </a>
+
+        
+      </li>
+
+      
+    
+  </ul>
+  <p class="sidebar_footer">Copyright (c) 2019+ <br> <a href="http://tigerwang.org">Gao Wang</a> and other lab members.<br>Distributed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA license</a>.<br></p>
+</nav>
+
+      
+      <main class="c-textbook__page" tabindex="-1">
+          <div class="o-wrapper">
+            <div class="c-sidebar-toggle">
+  <!-- We show the sidebar by default so we use .is-active -->
+  <button
+    id="js-sidebar-toggle"
+    class="hamburger hamburger--arrowalt is-active"
+  >
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+    <span class="c-sidebar-toggle__label">Toggle Sidebar</span>
+  </button>
+</div>
+
+            
+
+            <div class="c-textbook__content">
+              <div class="search-content__inner-wrap">
+    <input type="text" id="lunr_search" class="search-input" tabindex="-1" placeholder="'Enter your search term...''" />
+    <div id="results" class="results"></div>
+</div>
+
+<script>
+    // Add the lunr store since we will now search it
+    var store = [{
+        "title": "allele_qc",
+        
+        "excerpt":
+            "Allele flip when merging genotype data Problem Suppose we have some genetic variants measured in two sets of individuals and we would like to merge these genotype data. Ideally, a variant, given by chrom, position, reference allele, alternative allele, would easily merge if information between two data-sets are consistent. That is, the variant has the same 4 quantities for the different data-sets. However in reality there are a few problems: Scenario 1: When genotype data are given in PLINK format, there is no information on which allele is the reference and which is alternative allele. Instead all you get is...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/compbio_tutorial/allele_qc.html",
+        "teaser":null},{
+        "title": "Computational biology",
+        
+        "excerpt":
+            "Statistical Genetics      Statistical genetics short courses by Suzanne Leal.   Bioinformatics      PLINK data format   Allele QC tutorial for merging genotype/variants from different sources   Tutorials from group meetings   Link upon request.  ",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/compbio_tutorial/index.html",
+        "teaser":null},{
+        "title": "plink_format",
+        
+        "excerpt":
+            "About PLINK file format [From a slack discussion initialized by a student in the lab] PLINK format, in particular the bed/fam/bim bundle for genotype data, is one of the most popular format to store genotype information, amount a couple of others such as VCF (and derivatives from it) and bgen. PLINK is like a swiss army knife for statistical genetics — it does lots of extremely useful routine data analysis particularly data cleaning and exploratory analysis. That’s why it is easy to start an analysis in PLINK format in order to use features offered in PLINK to understand the basics...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/compbio_tutorial/plink_format.html",
+        "teaser":null},{
+        "title": "Computing",
+        
+        "excerpt":
+            "Programming      A list of must-know shell commands.   Linux shell for beginners, from MDC.   OpenMP C++ demo.   Python multiprocessing demo.   Software tools      A quick tutorial on nextflow (workflow tool).  ",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/computing_tutorial/index.html",
+        "teaser":null},{
+        "title": "openmp_cpp",
+        
+        "excerpt":
+            "OpenMP in C++, a toy example Example Create a file test.cpp #include &lt;iostream&gt; #include &lt;thread&gt; #include &lt;chrono&gt; #include &lt;omp.h&gt; #include &lt;vector&gt; #include &lt;stdlib.h&gt; int f(int i) { std::this_thread::sleep_for (std::chrono::seconds(1)); return i; } int main(int argc, char* argv[]) { int n_threads = atoi(argv[1]); std::cout &lt;&lt; n_threads &lt;&lt; \" threads ...\" &lt;&lt; std::endl; std::vector&lt;int&gt; M(25); #pragma omp parallel for num_threads(n_threads) for (int i=0; i&lt;25; i++) M[i] = f(i); return 0; } and compile with g++ test.cpp -fopenmp -std=c++11 -o test.exe and run it: [GW] time ./test.exe 1 1 threads ... real 0m25.004s user 0m0.000s sys 0m0.000s [GW] time ./test.exe 2 2 threads...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/computing_tutorial/openmp_cpp.html",
+        "teaser":null},{
+        "title": "python-multiprocessing",
+        
+        "excerpt":
+            "An Example of Python Multiprocessing Module import random from multiprocessing import Process, Queue from Queue import Empty import time class Worker(Process): def __init__(self, work_queue, result_queue): # base class initialization Process.__init__(self) # job management stuff self.work_queue = work_queue self.result_queue = result_queue self.kill_received = False def run(self): while not self.kill_received: # get a task try: job = self.work_queue.get_nowait() except Empty: break # the actual processing print(\"Starting \" + str(job) + \" ...\") delay = random.randrange(1,3) time.sleep(delay) # store the result self.result_queue.put(delay) if __name__ == \"__main__\": num_jobs = 20 num_processes=8 # run # load up work queue work_queue = Queue() for job in...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/computing_tutorial/python-multiprocessing.html",
+        "teaser":null},{
+        "title": "shell-must-know",
+        
+        "excerpt":
+            "A short list of “must know” shell commands Basic pwd cd; cd -; cd .. ls; ls -lhrt mkdir; mkdir -p mv cp; cp -a; scp cat; zcat less; zless head; tail wc -l history top; htop chmod; chmod +x tar xzvf; tar czvf; tar xjvf; tar cjvf Intermediate grep; grep -r; grep -n; grep -v sort uniq find tree du -h rsync; rsync -auzP Advanced (yet commonly used!) | awk sed explainshell.com This website can help you learn “fancy” shell command you see from others. Simply copy-paste to this web tool the shell command that you struggle to understand,...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/computing_tutorial/shell-must-know.html",
+        "teaser":null},{
+        "title": "Home",
+        
+        "excerpt":
+            "Welcome to the lab wiki!   This is an in-house wiki intended to provide useful information to members at the Centero for Statistical Genetics, although a portion of it is also publicly accessible.   If you are a member of the group please provide your github handler to Gao Wang for access to private contents.  ",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/index.html",
+        "teaser":null},{
+        "title": "books-2015",
+        
+        "excerpt":
+            "Reading list 2015 For book club 2015 - 2016 compiled by Xin He at UChicago. Biology The Language of Life: DNA and the Revolution in Personalized Medicine Genome: the Autobiography of a Species in 23 Chapters The Agile Gene: How Nature Turns on Nurture. by Matt Ridley. Genes, Chromosomes, and Disease: From Simple Traits, to Complex Traits, to Personalized Medicine The $1,000 Genome: The Revolution in DNA Sequencing and the New Era of Personalized Medicine Evolution: The Triumph of an Idea The Making of the Fittest: DNA and the Ultimate Forensic Record of Evolution Before the Dawn: Recovering the Lost...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/learning_center/books-2015.html",
+        "teaser":null},{
+        "title": "books-2020",
+        
+        "excerpt":
+            "Reading list 2020   For book club 2020 at CSG, Columbia.   Biology      The Serengeti Rules   Statistics      Understanding Uncertainty 11th Edition by Dennis V. Lindley   Misc      Thinking, Fast and Slow  ",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/learning_center/books-2020.html",
+        "teaser":null},{
+        "title": "comp-genomics-2016",
+        
+        "excerpt":
+            "Computational genomics reading list (version 2016) A list compiled by Xin He at UChicago in 2016. Sequence Analysis Motif discovery Background What are DNA sequence motifs? NBT, 2006 How does DNA sequence motif discovery work? NBT, 2006 Paper Fitting a mixture model by expectation maximization to discover motifs in biopolymers, ISMB, 2004 (MEME) Profile HMM Background Eddy, Hidden Markov Models, Current Opinion in Structural Biology, 1996 DEKM, Introduction in Chapter 5. Paper DEKM Chapter 5, 5.1-5.4. Dynamic Programming Introduction to Algorithms, CLRS, 3^rd^ edition. Sections: 15.1-15.3. Remark: focus on the main recurrence equations, (15.2) and (15.7). Pay less attention to...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/learning_center/comp-genomics-2016.html",
+        "teaser":null},{
+        "title": "compbio-books",
+        
+        "excerpt":
+            "Computational biology books Bioinformatics Biological Sequence Analysis: Probabilistic Models of Proteins and Nucleic Acids Richard Durbin, Sean R. Eddy, Anders Krogh, Graeme Mitchison (DEKM) An Introduction to Bioinformatics Algorithms Neil C. Jones and Pavel A. Pevzner Bioinformatics Data Skills: Reproducible and Robust Research with Open Source Tools Vince Buffalo Statistical genetics Introductory Analysis of Complex Disease Association Studies: A Practical Guide (1st Edition, 2010) Advanced Genetics and Analysis of Quantitative Traits (1st edition, 1998) Evolution and Selection of Quantitative Traits (1st edition, 2018) Analysis of human linkage (3rd edition, 1999) Recommendations from Columbia biostats master program (statistical genetics track) The...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/learning_center/compbio-books.html",
+        "teaser":null},{
+        "title": "Learning resource",
+        
+        "excerpt":
+            "About Relevant books, papers, lectures and other learning materials online, mostly authored by others but compiled &amp; curated by us. Books Text books Statistics backgroud most relevant to our research. Computational biology. Popular science books Book club 2015, a list compiled by Xin He in 2015. CSG book club. Papers Keep up with literature A list of relevant journals. How to keep up with the scientific literature (a 2016 blogpost). A distilled version by Gao Wang. General collections Nature’s Scitable. PLoS Compbio Education collection. Nature Biotech Computational Biology collection. Computational genomics papers, a list compiled by Xin He in 2016....",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/learning_center/index.html",
+        "teaser":null},{
+        "title": "journals",
+        
+        "excerpt":
+            "Relevant journals   Generic      Science   Nature   Nature Genetics   Nature Biotech   Nature Method   Nature Communication   eLife   F1000 Research   Genetics      American Journal of Human Genetics   PLOS Genetics   Genome Biology   Genome Research   Genetics   Genetic Epidemiology   European Journal of Human Genetics   BMC Genomics   Computational Biology      Bioinformatics   PLOS Computational Biology   Biostatistics   NAR   BMC Bioinformatics   Statistics      Biostatistics   AoAS   JASA   JRSS  ",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/learning_center/journals.html",
+        "teaser":null},{
+        "title": "keep-up-literature-2016",
+        
+        "excerpt":
+            "Keep up with literature Notes from this post. Reading techniques Use an app. I (Gao) have been using RSS feads. Others have mentioned Read RXMD, PubCrawler, Google Scholar (updates feature), alerts from journals, Twitter, Pubchase, TOC of favorite journal, talk to others, readcube. Every morning, read abstracts. Save some relevant ones for later to read deeper. Every Friday use a regular time block to read in details of the most relevant ones. Blog about it or Twit it within 140 characters. Download all papers and read them in chunks. Summer is best time for reading. Keep organized and able to...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/learning_center/keep-up-literature-2016.html",
+        "teaser":null},{
+        "title": "rnaseq-papers",
+        
+        "excerpt":
+            "RNA-seq papers Bulk RNA-seq analysis Introductory RNA-seq: a revolutionary tool for transcriptomics / Link From RNA-seq reads to differential expression results / Link IVT-seq reveals extreme bias in RNA sequencing / Link Differential expression analysis Linear models and empirical bayes methods for assessing differential expressing in microarray experiments / Link voom: precision weights unlock linear model analysis tools for RNA-seq read counts / Link - limma-voom Differential expression analysis for sequence count data / Link - DESeq Multiple testing and false discovery rate Statistical significance for genomewide studies / Link False discover rate: A new deal / Link Batch effects...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/learning_center/rnaseq-papers.html",
+        "teaser":null},{
+        "title": "statgen-papers",
+        
+        "excerpt":
+            "Statistical genetics papers Introductory Bayesian statistical methods for genetic association studies. [NRG, 2009] The role of regulatory variation in complex traits and disease [NRG, 2015] Dissecting the genetics of complex traits using summary association statistics [NRG, 2017] From genome-wide associations to candidate causal variants by statistical fine-mapping [NRG, 2018] The personal and clinical utility of polygenic risk scores [NRG, 2018] GWAS A brief history of human disease genetics. [Nature, 2020, a good general overview] Genetic mapping in human disease. [Science, 2008] Genome-wide association studies for complex traits: consensus, uncertainty and challenges. [NRG, 2008] Genome-wide association study of 14,000 cases of...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/learning_center/statgen-papers.html",
+        "teaser":null},{
+        "title": "stats-background",
+        
+        "excerpt":
+            "Introductory books on statistics Paper text books Statistical Modeling and Machine Learning for Molecular Biology By Alan Moses Statistical Inference (2nd Edition) By Casella and Berger An introductory book to mathematical statistics: probability, distributions, MLE and significance testing Statistical Rethinking (2nd Edition) Written by a scientist this is a good Bayesian inference book for scientists (and perhaps not statisticians) with a little bit statistics and computing background Designed for sequential (study from the beginning to the end) not random (read about certain topics) access Youtube lectures available Bayesian Data analysis (3rd Edition) Classic Bayesian text book by Gelman et al....",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/learning_center/stats-background.html",
+        "teaser":null},{
+        "title": "5 minutes git",
+        
+        "excerpt":
+            "5 Minutes git tutorial What is git? Git is a distributed version control system that not only automatically records the changes of each file, but also allows colleagues to collaborate and edit, so that users do not need to manage a bunch of files, and do not need to transfer files from / to colleagues. It keeps track of any change to any files (git diff, git log and git blame) in your project. It allows you to easily see history of modifications of a file, or restore the file to any time point in the history. In the context...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/orientation/5m-git.html",
+        "teaser":null},{
+        "title": "bioinformatics-tools",
+        
+        "excerpt":
+            "A list of commonly used software tools Next generation sequencing fastqc: A quality control tool for high throughput sequence data. BWA: alignment &amp; mapping sequences against reference genome samtools: manipulation and variant calling for sequence alignment in BAM format GATK: Variant calling tool for sequence alignment data in BAM format picard: manipulating high-throughput sequencing data and formats vcftools: manipulation of VCF files bcftools: a faster replacement of vcftools, and also provides variant calling function tabix: index and query for tab delimited genomic position files IGV: visualization tool for interactive exploration of sequence alignment data Variant annotation ANNOVAR SnpEff Genotype management...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/orientation/bioinformatics-tools.html",
+        "teaser":null},{
+        "title": "faq",
+        
+        "excerpt":
+            "FAQ What programming languages do we use and what language is preferred? Short answer: R (45%), Python (45%), and others (10%) mainly including C++ (typically with R through Rcpp), BASH and SQLite. On top of these, we use DSC to perform simulation studies and SoS to write analysis pipelines. Long answer: the choice of language typically depends on the nature of the project and what has already been done for the project. More often than not, a project involving both numerical simulation studies and real-world data analysis might require using a combination of programming languages for different tasks. That is...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/orientation/faq.html",
+        "teaser":null},{
+        "title": "git-tips",
+        
+        "excerpt":
+            "Discuss about merge conflict You can run into a merge conflict when you commit a change and someone else has made changes to the file. When you face this type of merge conflicts there are two options. Clean the file manually Open the file using a text editor and modify the conflicting parts of the file that will appear marked with &gt;&gt;&gt; &lt;&lt;&lt;. The file won’t be usable unless you edit it to resolve these conflicts. Then commit and push this new file into the repository. Remove the local copy of the GitHub repository Make sure your local clone does...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/orientation/git-tips.html",
+        "teaser":null},{
+        "title": "Use github issues",
+        
+        "excerpt":
+            "How to write a github issue Issues for discussion, new ideas, exchange of thoughts First, describe your motivation – why are you proposing something? what’s wrong with existing solution? Intuition behand your proposed solution – why do you think it will work? Feasibility of your solution – how long does it take to implement? Is it simple enough as a proof of concept that can be further developed into more sophisticated solutions? Issues for bug reports This is when you think you are doing it correctly as instructed in the documentation, but the code does not work as expected –...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/orientation/github-issues.html",
+        "teaser":null},{
+        "title": "Orientation",
+        
+        "excerpt":
+            "Welcome to the lab! This page is created specifically for new comers to the lab. Project resources For a quick overview of what we are up to, here is a curated list of project repositories of the lab. They are contributed by different past and current members in various styles, but are all meant to follow good computational research practice that makes our work easy to share and reproduce. Get onboard You should have received emails of onboarding instructions from the HR department prior to your start day. Please follow those to get onboard. You will have to run by...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/orientation/index.html",
+        "teaser":null},{
+        "title": "Jupyter and SoS suite setup",
+        
+        "excerpt":
+            "JupyterLab + SoS Suite setup Operating OS requirement The instructions on this page are tested and known to work for Linux and MacOS. It has not been tested on Windows. Although with some efforts it might work for Windows, using Windows your every day computational biology research is discouraged. If you don’t have access to other types of OS, an alternative is to set up a Linux OS under your Windows OS using Windows Subsystem for Linux. Install miniconda3 the Python development environment We recommend using miniconda over anaconda and customize your installation as needed after install this minimal version...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/orientation/jupyter-setup.html",
+        "teaser":null},{
+        "title": "lab-members",
+        
+        "excerpt":
+            "This page is meant to help new members learning to use github, contributing to the wiki and finding their “orientation guide”. A formal list of lab members can be found on the CSG homepage. Please slack a paragraph about yourself and optionally your favorite profile photo to Gao Wang if you would like to create a profile page like this to link from that list. You can also send a link to your profile on a professional service (eg, Google Scholar, linkedIn, github, ORCID, ResearchGate, …) as an alternative. Name github handler Orientation tour guide Anything else you want to...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/orientation/lab-members.html",
+        "teaser":null},{
+        "title": "bash-oneliner",
+        
+        "excerpt":
+            "Useful One-liners Computer Commands Basics List hidden folders ls -la | awk '{print $9}' | grep \"^\\.\" | grep -v \"\\.$\" | grep -v \"^.vtools\" Terminal colored text echo -e \"\\e[1;34mThis is bold blue text.\\e[0m\" echo -e \"\\e[4;31mThis is underlined red text.\\e[0m\" Search related Find large files sudo find /itch -size +20G -exec du -h {} \\; &gt; LargeFiles.txt Find and remove folders find . -type d -name \".svn\" -exec rm -r {} \\; find . -name .svn -print0 | xargs -0 rm -r Find and replace pattern from all files perl -pi.bak -e 's/sample_variant_/genotype_/g' *.py perl -pi.bak -e 's/@@@\\\\\\(/{\\$\\\\\\(/g'...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/productivity_tips/bash-oneliner.html",
+        "teaser":null},{
+        "title": "beginner-linuxmint",
+        
+        "excerpt":
+            "A beginner’s note on Linux Mint Desktop This page documents some tips for beginner users on Linux Mint Desktop environment. Setup You can download the latest system ISO file and build the system to a USB drive using, eg, netbootin. You then restart your computer, boot it from USB (might have to change your BIOS default boot sequence in order to start from a USB), follow prompts until you get into the “live” operating system. There you will find on the Desktop an icon to “Install Mint”. Double click on it and follow the prompts to install the system. When...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/productivity_tips/beginner-linuxmint.html",
+        "teaser":null},{
+        "title": "cluster-commands",
+        
+        "excerpt":
+            "Commonly used commands on HPC cluster SGE List all nodes and memory qhost Show current running jobs qstat Show current jobs for a user &lt;uni&gt; qstat -u &lt;uni&gt; Submit a dummy job of “sleeping for 40 seconds” (/bin/sleep 40) to a particular node requesting 10GB memory: qsub -l h=\"node33\" -l h_vmem=10G -b y /bin/sleep 40 See here for a list of options and explanations. slurm Status of a previous job eg, how much memory it was using: $ sacct -j 15215620 --format=jobid,jobname,partition,account,alloccpus,state,maxvmsize JobID JobName Partition Account AllocCPUS State MaxVMSize ------------ ---------- ---------- ---------- ---------- ---------- ---------- 15215620 RCDAS sandyb pi-msteph+...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/productivity_tips/cluster-commands.html",
+        "teaser":null},{
+        "title": "cumc-vpn",
+        
+        "excerpt":
+            "CUIMC VPN For general information see: https://www.it.cuimc.columbia.edu This VPN is different from Columbia VPN. Columbia VPN will appear in your phone’s Duo Mobile app as “Columbia University”. This will appear as “CUMC”. Setup Duo MFA for VPN access You need to set up the CUIMC MFA (not Columbia MFA!) in order to use CUIMC VPN. Here are instructions. Several options are available but it is perhaps most convenient to setup it to your cell phone with an app called “Duo Mobile”. Notice that the actual setup can only be performed outside of the CUIMC campus. Using CUIMC VPN with Duo...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/productivity_tips/cumc-vpn.html",
+        "teaser":null},{
+        "title": "dbGaP-download",
+        
+        "excerpt":
+            "Download data from dbGaP A brief documentation to how dbGaP website is accessed &amp; how to download data. Contributors Gao Wang, Dongyue Xie Data directory Files downloaded from dbGaP need to be decypted &amp; extracted to usable formats. Files are first to be downloaded to some temporary directory, then processed and saved into a more permanent location. It is therefore suggested that on RCC Midway, for example, you download data to a temporary folder under /scratch/midway2/$USER then extract them to shared computational space /project2/mstephens/ for sharing with the group. This documentation assumes this workflow. dbGaP access Visit dbGaP, click on...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/productivity_tips/dbGaP-download.html",
+        "teaser":null},{
+        "title": "debian-setup",
+        
+        "excerpt":
+            "Software installation on Debian based system Some suggested apt-get commands Most software should be installed via conda especially for bioinformatics (see later). Here are a few system-wide software better installed via apt-get. They work for Debian 9 or distributions based on Debian 9 (have not tested them on Ubuntu): sudo apt-get install git curl unzip gzip bzip2 ca-certificates build-essential gfortran libgfortran-6-dev libgomp1 libgsl-dev libatlas3-base liblapack-dev libcurl4-openssl-dev libssl-dev sudo apt-get install openssh-server sudo apt-get install vim vim-gtk3 sudo apt-get install trash-cli sudo apt-get install texlive-full python-pygments fonts-wqy-microhei ttf-wqy-microhei fonts-wqy-zenhei ttf-wqy-zenhei pandoc graphviz libmagickwand-dev nodejs sudo apt-get install smartmontools lm-sensors htop sudo...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/productivity_tips/debian-setup.html",
+        "teaser":null},{
+        "title": "Productivity tips",
+        
+        "excerpt":
+            "Linux OS setup Linux Mint setup. An automated installation script written in SoS workflow. A (outdated) Debian / Ubuntu setup guide. HPC computing Sun Grid Engine cluster for beginners, from MDC. Commonly used commands on HPC cluster. Data access and sharing Download from dbGaP. Computing devices Setup and run Jupyter server on cluster. Connect from one computer to another. Columbia Medical Center VPN. Software development tips Automatic package versioning in R for packages you develop. Command line tools Monitor memory usage for a command line program. Other productivity tools dynalist, I find it useful for notes taking and outlineing ideas....",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/productivity_tips/index.html",
+        "teaser":null},{
+        "title": "python-tips",
+        
+        "excerpt":
+            "Python tips   Performance tips   Overall performance   python -m cProfile encode-linkage --vcf 19.vcf.gz --tfam 19.tfam --vanilla -j4 &gt; profile.log cat profile.log | grep -v -e 'argparse\\|time\\|posix\\|threading\\|urllib' | sort -k4 -g -r | head -50   Time per line   pip install line_profiler kernprof -l script_to_profile.py python -m line_profiler script_to_profile.py.lprof   Memory per line   pip install memory_profiler python -m memory_profiler script_to_profile.py  ",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/productivity_tips/python-tips.html",
+        "teaser":null},{
+        "title": "r-tips",
+        
+        "excerpt":
+            "R tips   “commandArgs” example   Save a script cmd.R with contents below:   eval(parse(text=commandArgs(T))) print(c(x,y,z))   then run Rscript cmd.R x=1 y=2 z=3 to see the outcome.  ",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/productivity_tips/r-tips.html",
+        "teaser":null},{
+        "title": "remote-computer",
+        
+        "excerpt":
+            "Connect from your personal computer to another computer This is a typical user case when we need to work with a computer server to perform data analysis etc but not physically in front of the machine. Rather we connect to it from another machine, say a personal laptop. Here we introduce in brief a few methods to connect and work with remote computers. I’ll call it “host” for the remote computer, and “guest” for the computer through which you connect to the host. Through command shell for Linux and Mac Get IP address First, obtain the IP address or domain...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/productivity_tips/remote-computer.html",
+        "teaser":null},{
+        "title": "Data resources",
+        
+        "excerpt":
+            "Data resources   This page is automatically generated from individual Markdown files and sorted alphabetically. You can use the Search Bar on the side of the wiki to look for contents of interest. Please do not edit this page manually.   G     GIANT Adult Height GWAS Summary Data and Estimated LD. The single-SNP summary statistics and estimated LD matrices for adult human height (Wood et al, 2014).            Xiang Zhu (UChicago).          ",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/project_resource/data.html",
+        "teaser":null},{
+        "title": "Projects",
+        
+        "excerpt":
+            "Lab project resources      List of research projects, links to ongoing / past research projects.   Analysis workflows / pipelines, analysis pipelines from the lab. They should be clearly documented and reproducible.   Data resources, data inventory in our shared computing devices.   Resource sharing guidelines.  ",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/project_resource/index.html",
+        "teaser":null},{
+        "title": "Pipelines & benchmarks",
+        
+        "excerpt":
+            "Pipelines and benchmarks made by members of the lab This is a curated list of pipelines and computational benchmarks made in the lab, at the level of maturity and quality of engineering good enough to be used by other research groups in the community. GWAS enrichment and fine-mapping Pipeline for enrichment and fine-mapping using annotation and GWAS summary statistics. It implements enrichment analysis via torus and fine-mapping using summary statistics and LD panel from reference genotype files via susieR, CAVIAR and FINEMAP. Gao Wang and Min Qiao eQTL association and multivariate analysis Multivariate Adaptive Shrinkage (MASH) pipeline currently works on...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/project_resource/pipeline.html",
+        "teaser":null},{
+        "title": "Project repositories",
+        
+        "excerpt":
+            "List of lab projects This page is automatically generated from individual Markdown files and sorted alphabetically. You can use the Search Bar on the side of the wiki to look for contents of interest. Please do not edit this page manually. A Alzheimer’s disease (AD) gene mapping in multi-ethnic families. The project aims to identify novel AD targets using WGS and WES data from &gt;1000 AD families. Justin Adam Ghaeli and Tabassum Fabiha. Alzhemier’s disease risk prediction and feature discovery. This project aims to profile Alzhemier’s disease risk factors through integrating genomic sequence features and their health records. Rachita Naik...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/project_resource/project.html",
+        "teaser":null},{
+        "title": "Sharing guidelines",
+        
+        "excerpt":
+            "Guideline for internal resource sharing   Department HPC information      A user guide.   Add data-set descriptions   It is required that for every data-set added, you should contribute a description of data to the data inventory, using this template. Here is an example contribution. A data catelog is automatically generated and published to this wiki.   Add project descriptions   For completed projects, you should contribute a description of the project to the project list, using this template. Here is an example contribution. A project catelog is automatically generated and published to this wiki.  ",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/project_resource/sharing-guideline.html",
+        "teaser":null},{
+        "title": "Research resource",
+        
+        "excerpt":
+            "Research tools   Genomic annotation      ANNOVAR A web server for ANNOVAR.   biosig tools for variant effect prediction.   Imputation      Michigan Imputation Server A web server for fast and efficient imputation and phasing of genotype data.   Bayesian inference      cran list of Bayesian inference packages.   Visualization      Create professional biological science figures.  ",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/research_resource/index.html",
+        "teaser":null},{
+        "title": "campus_directions",
+        
+        "excerpt":
+            "Directions   Lab location   We are located in the Sergievsky Center at Columbia VP&amp;S. The address is 630 W 168th Street, PH 19, New York, NY 10032. Access to the lab is best through the NewYork–Presbyterian Hospital Vanderbilt Clinic entrance on 622 W 168th St. Take the elevators in the hall way behind the security desk to the 19th floor, you will see the sign for Sergievsky Center immediately as you step off the elevator.  ",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/this_that/campus_directions.html",
+        "teaser":null},{
+        "title": "events",
+        
+        "excerpt":
+            "A list of events and seminars on campus      Columbia University Events   2020 special year on machine learning   School of public health events   Biostatistics department events   Biomedical informatics department events   2020 SHARP training at school of public health   Statistical genetics seminars  ",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/this_that/events.html",
+        "teaser":null},{
+        "title": "fort_lee",
+        
+        "excerpt":
+            "Fort Lee Asian restaurants   All you can eat      The meat bros Korean BBQ   Yea Jip BBQ   KPOT AYCE Rolling Hot pot   Noodle &amp; tofu soap      Myung Dong Noodle House   Sa Rit Gol   American Chinese fast food takeout      Jade House   King Hong   Grocery   Korean      H Mart, 112 Linwood Drive #130   H Mart Fresh, 1379 16th St.   Hannam Chain   Greek &amp; Italian      Cafasso’s Fairway Market  ",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/this_that/fort_lee.html",
+        "teaser":null},{
+        "title": "housing",
+        
+        "excerpt":
+            "Housing options We are located at Columbia University Medical Center (630 West 168th Street, New York, NY 10032, United States). We suggest looking at options and prices already, but start your search 2 months before you move. General resources Zillow (https://www.zillow.com) Trulia (https://www.trulia.com/) Streeteasy (https://streeteasy.com/ - for New York) Apartments.com (https://www.apartments.com/) On these websites you can also find realtors who can help you find a place. But they may only work with someone who is physically here. You can also search on Google Map the phrase “leasing office” for the area you are interested in, and click on the pins...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/this_that/housing.html",
+        "teaser":null},{
+        "title": "This and that",
+        
+        "excerpt":
+            "This and that   Medical campus      CUMC neighborhood.   Directions.   Housing options.   Columbia resources      Office of Work/Life.   List of relevant seminars   About New York City      Museums in NYC.   Restaurants in NYC.   About Fort Lee      Grocery and restaurants in Fort Lee.   For international scholars      J1 and H1B visa, a personal experience.  ",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/this_that/index.html",
+        "teaser":null},{
+        "title": "nyc_museums",
+        
+        "excerpt":
+            "Museum recommendations from the lab This is a partial selection of the many great museums that the city has to offer (for not so much money). FIT Fashion museum. Have a very nice exhibit now on Paris Fashion free but not open on Sundays https://www.fitnyc.edu/museum/exhibitions/index.php Museum of the City of NY https://www.mcny.org/exhibitions Give what you want Museum of art and design (MAD) https://madmuseum.org/ Give what you want Thursday nights MorganLibrary and Museum Free Friday https://www.themorgan.org/exhibitions/current Offers educational discount New-York Historical Society https://www.nyhistory.org/ Give what you want on Friday Offers Educational discount Guggenheim Give what you ant on Saturday Copper Hewitt...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/this_that/nyc_museums.html",
+        "teaser":null},{
+        "title": "nyc_restaurants",
+        
+        "excerpt":
+            "Restaurant recommendations from the lab Astoria Seafood: This restaurant is a hidden gem in Queens. You go in and pick any seafood you want and then you tell them how you want it to be cooked and they will do so. I totally recommend the grilled shrimps and calamari. Don’t forget to bring your own drink. Halal Guys in the city Arepa Lady in Jackson Heights Oceanic Boil in Jackson Heights: No worries about getting dirty, they provide you with gloves and a plastic bib. For authentic tacos any taco truck around Roosevelt Ave. from 79th St to 74th St...",
+        "categories": [],
+        "tags": [],
+        "url": "http://statgen.us/lab-wiki/this_that/nyc_restaurants.html",
+        "teaser":null},]
+</script>
+              <nav class="c-page__nav">
+  
+
+  
+</nav>
+
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+  </body>
+</html>
